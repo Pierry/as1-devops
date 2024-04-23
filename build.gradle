@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+    // Kotlin Spark API
+    implementation 'org.jetbrains.kotlinx.spark:kotlin-spark-api_3.3.2_2.13:1.2.4'
+    // Apache Spark
+    implementation "com.sparkjava:spark-core:2.9.4"
+    implementation "com.sparkjava:spark-kotlin:1.0.0-alpha"
+}
+
+test {
+    useJUnitPlatform()
+}
